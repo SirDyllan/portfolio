@@ -9,7 +9,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/dyllan-mutsereketa-519855390",
   github: "https://github.com/SirDyllan",
   cv: "/docs/dyllan-mutsereketa-cv.docx",
-  photo: "/images/dyllan-profile.jpeg",
+  photo: "/images/dyllan-profile.jpg",
 };
 
 export const skills: Record<string, string[]> = {
