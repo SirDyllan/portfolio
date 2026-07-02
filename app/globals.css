@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f1e7;
+  color: #1a1a1d;
+}
+
+::selection {
+  background: #f0a83a;
+  color: #1a1a1d;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #db8f1f;
+}
+
+.eyebrow-dark {
+  color: #f0a83a;
+}
+
+.section-pad {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.corner-card {
+  position: relative;
+  border-radius: 1.75rem;
+}
+
+.corner-card::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #f0a83a;
+  border-top-left-radius: 1.75rem;
+  clip-path: path("M0 0 H40 A40 40 0 0 0 0 40 Z");
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.node-dot {
+  position: relative;
+}
+
+.node-dot::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1.4rem;
+  bottom: -1.8rem;
+  width: 1px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(245, 241, 231, 0.3) 0,
+    rgba(245, 241, 231, 0.3) 4px,
+    transparent 4px,
+    transparent 9px
+  );
+  background-size: 1px 9px;
+}
+
+.node-dot:last-child::before {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
