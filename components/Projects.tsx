@@ -2,13 +2,16 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Award } from "lucide-react";
+import { ExternalLink, Award, Images } from "lucide-react";
 import { projects, certificates } from "@/lib/data";
 import CertificateModal from "./CertificateModal";
+import GalleryModal from "./GalleryModal";
 
 export default function Projects() {
   const [activeCert, setActiveCert] = useState<string | null>(null);
+  const [activeGallery, setActiveGallery] = useState<string | null>(null);
   const certificate = certificates.find((c) => c.id === activeCert) ?? null;
+  const galleryProject = projects.find((p) => p.title === activeGallery) ?? null;
 
   return (
     <section id="projects" className="section-pad">
@@ -82,6 +85,15 @@ export default function Projects() {
                     <Award size={13} /> View Certificate
                   </button>
                 )}
+                {project.gallery && project.gallery.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setActiveGallery(project.title)}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-goldDeep px-4 py-2 text-xs font-bold text-goldDeep transition hover:bg-gold hover:text-ink"
+                  >
+                    <Images size={13} /> View Gallery
+                  </button>
+                )}
               </div>
             </motion.article>
           ))}
@@ -90,6 +102,14 @@ export default function Projects() {
 
       {certificate && (
         <CertificateModal certificate={certificate} onClose={() => setActiveCert(null)} />
+      )}
+
+      {galleryProject && galleryProject.gallery && (
+        <GalleryModal
+          title={galleryProject.title}
+          images={galleryProject.gallery}
+          onClose={() => setActiveGallery(null)}
+        />
       )}
     </section>
   );

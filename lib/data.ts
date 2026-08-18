@@ -1,11 +1,13 @@
 export const profile = {
   name: "Dyllan Mutsereketa",
   brand: "Dyllan Mutsereketa",
-  role: "IT Student | Software Developer | Data Enthusiast",
+  role: "IT Student | Software Developer | Graphic Designer",
   location: "Zimbabwe",
   email: "dyllanmutsereketa@gmail.com",
   phone: "+263 78 036 8715",
   phoneHref: "+263780368715",
+  whatsapp: "https://wa.me/263780368715",
+  instagram: "",
   linkedin: "https://www.linkedin.com/in/dyllan-mutsereketa-519855390",
   github: "https://github.com/SirDyllan",
   cv: "/docs/dyllan-mutsereketa-cv.docx",
@@ -55,7 +57,6 @@ export const skills: Record<string, string[]> = {
     "MySQL Workbench",
     "GitHub",
     "Vercel",
-    "Figma",
     "Kaggle",
     "IntelliJ IDEA",
     "Android Studio",
@@ -65,6 +66,14 @@ export const skills: Record<string, string[]> = {
     "Google Maps API",
     "OpenAI API",
     "Namecheap Hosting",
+  ],
+  "Design & Marketing": [
+    "Adobe Photoshop",
+    "Figma",
+    "Meta Business Suite",
+    "Graphic Design",
+    "UI/UX Design",
+    "Social Media Management",
   ],
 };
 
@@ -77,6 +86,14 @@ export type Project = {
   linkLabel?: string;
   certificateId?: string;
   featured?: boolean;
+  /**
+   * Optional project photo gallery. Add image paths here (e.g.
+   * "/images/projects/ceshhar/screen-1.jpg") after dropping the matching
+   * files into the public/images/projects/<project-folder>/ directory.
+   * When this array has at least one entry, a "View Gallery" button
+   * appears on the project card automatically.
+   */
+  gallery?: string[];
 };
 
 export const projects: Project[] = [
@@ -119,6 +136,17 @@ export const projects: Project[] = [
       "Accessibility Features",
     ],
     certificateId: "ceshhar-mascot-hackathon",
+    // Drop screenshots/photos into public/images/projects/ceshhar/ then
+    // list the filenames here, e.g. "/images/projects/ceshhar/screen-1.jpg"
+    gallery: [
+      "/images/projects/ceshhar/x.jpeg",
+      "/images/projects/ceshhar/n.jpeg",
+      "/images/projects/ceshhar/m.jpeg",
+      "/images/projects/ceshhar/v.jpeg",
+      "/images/projects/ceshhar/l.jpeg",
+      "/images/projects/ceshhar/b.jpeg",
+      "/images/projects/ceshhar/z.jpeg",
+    ],
   },
   {
     title: "Hollandsck Intelligent Property Auction & Verification System (HPAVS)",
@@ -168,6 +196,24 @@ export const projects: Project[] = [
     stack: ["Engineering", "Innovation", "Community Impact"],
   },
   {
+    title: "Graphic Design Work at Codico Software Solutions",
+    type: "Freelance / Remote Graphic Design",
+    summary:
+      "Ongoing design work as a remote Graphic Designer at Codico Software Solutions, producing branded visuals, social media creatives, and UI/UX concepts using Adobe Photoshop and Figma, with content scheduled and managed through Meta Business Suite.",
+    stack: ["Adobe Photoshop", "Figma", "Meta Business Suite", "Graphic Design", "UI/UX Design"],
+    // Drop your Photoshop/Figma design pieces into
+    // public/images/projects/codico/ then list the filenames here, e.g.
+    // "/images/projects/codico/design-1.jpg"
+    gallery: [
+      "/images/projects/codico/a.jpeg",
+      "/images/projects/codico/b.jpeg",
+      "/images/projects/codico/c.jpeg",
+      "/images/projects/codico/sofa2.png",
+      "/images/projects/codico/flyer.png",
+      "/images/projects/codico/headboard.png",
+    ],
+  },
+  {
     title: "Other University & Practice Projects",
     type: "Student Project Collection",
     summary:
@@ -210,6 +256,7 @@ export const timeline: string[] = [
   "Property and rental management operations exposure",
   "Health-tech innovation experience through the CeSHHAR Zimbabwe MASCOT Hackathon",
   "AI product-building experience through the USAII Global Hackathon",
+  "Remote Graphic Designer at Codico Software Solutions, designing with Adobe Photoshop and Figma, with experience in Meta Business Suite",
 ];
 
 export const databaseExperience = {
