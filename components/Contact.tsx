@@ -33,7 +33,7 @@ export default function Contact() {
     const subject = `Portfolio enquiry from ${name}`;
     const body = `${message}
 
-— ${name} (${email})`;
+From ${name} (${email})`;
     window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     setStatus("success");

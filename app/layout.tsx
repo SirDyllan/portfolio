@@ -14,7 +14,7 @@ const body = Inter({
   variable: "--font-inter",
 });
 
-const title = "Dyllan Mutsereketa — Software Developer, Data Analyst & IT Intern";
+const title = "Dyllan Mutsereketa | Software Developer, Data Analyst & IT Intern";
 const description =
   "Portfolio of Dyllan Mutsereketa, a Zimbabwean software developer and data analyst with a networking background, currently an IT Intern at Prevsol Digital. Web, mobile, data and AI projects.";
 

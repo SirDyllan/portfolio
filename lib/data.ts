@@ -16,6 +16,7 @@ export const profile = {
   name: "Dyllan Mutsereketa",
   brand: "Dyllan Mutsereketa",
   role: "Software Developer · Data Analyst",
+  headline: "IT Intern at Prevsol Digital",
   location: "Zimbabwe",
   email: "dyllanmutsereketa@gmail.com",
   phone: "+263 78 036 8715",
@@ -60,8 +61,8 @@ export const experience: Experience[] = [
     company: "Prevsol Digital",
     logo: "/logos/prevsol-digital.png",
     role: "IT Intern",
-    employmentType: "Internship · 12-month contract",
-    location: "Zimbabwe · On-site",
+    employmentType: "Internship · 12 month contract",
+    location: "Zimbabwe · On site",
     start: "Sep 28, 2026",
     end: "Sep 28, 2027",
     current: true,
@@ -79,7 +80,7 @@ export const experience: Experience[] = [
       {
         name: "Feltach Contracting",
         logo: "/logos/feltach-contracting.svg",
-        note: "Sister business — supported under the same contract",
+        note: "Sister business, supported under the same contract",
       },
     ],
     tags: ["Requirements Analysis", "Software Development", "Databases & APIs", "Version Control", "Testing & QA", "Documentation", "Deployment"],
@@ -98,11 +99,11 @@ export const experience: Experience[] = [
     summary:
       "Remote role contributing to software development and UI work for the company and its clients, alongside design support.",
     highlights: [
-      "Contributed to software development tasks and front-end implementation.",
+      "Contributed to software development tasks and front end implementation.",
       "Produced UI/UX concepts and interface mockups in Figma.",
       "Supported the team with branded visuals and digital content.",
     ],
-    tags: ["Software Development", "Front-end", "UI/UX", "Figma", "Adobe Photoshop"],
+    tags: ["Software Development", "Front End", "UI/UX", "Figma", "Adobe Photoshop"],
     gallery: [
       "/images/projects/codico/a.jpeg",
       "/images/projects/codico/b.jpeg",
@@ -203,7 +204,7 @@ export const projects: Project[] = [
     title: "NetOne Dynamic Antenna Intelligence",
     type: "Explainable AI Antenna Optimisation · NESARI 2026",
     summary:
-      "Built with the GreenHex Team for NetOne Topic 2 at the NESARI 2026 competition in Masvingo. A software-first prototype that scans 72 directions of simulated network demand, forecasts where demand is heading, and recommends a safe antenna azimuth and tilt — explaining every decision and choosing HOLD when its forecast is unreliable or the gain is too small. A live dashboard compares fixed, busiest-direction and forecast-aware strategies, verifies results on unseen data, with a virtual Arduino servo demo in Tinkercad showing the actuator idea.",
+      "Built with the GreenHex Team for NetOne Topic 2 at the NESARI 2026 competition in Masvingo. A software first prototype that scans 72 directions of simulated network demand, forecasts where demand is heading, and recommends a safe antenna azimuth and tilt, explaining every decision and choosing HOLD when its forecast is unreliable or the gain is too small. A live dashboard compares fixed, busiest direction and forecast aware strategies, verifies results on unseen data, with a virtual Arduino servo demo in Tinkercad showing the actuator idea.",
     stack: [
       "Python",
       "Flask",
@@ -224,9 +225,9 @@ export const projects: Project[] = [
   },
   {
     title: "ServiceBridge AI",
-    type: "AI-Powered Benefits Navigator (Next.js Web App)",
+    type: "AI Powered Benefits Navigator (Next.js Web App)",
     summary:
-      "A benefits navigator that helps people understand possible public support, prepare documents, and know when to verify with a real human or official office. Users describe their situation in plain language or complete a guided check, and the system suggests support pathways, document readiness, next steps, official source links and office search across food support, education, emergency relief, healthcare, ID documents, youth employment and family support — with source-backed examples for the USA and Zimbabwe.",
+      "A benefits navigator that helps people understand possible public support, prepare documents, and know when to verify with a real human or official office. Users describe their situation in plain language or complete a guided check, and the system suggests support pathways, document readiness, next steps, official source links and office search across food support, education, emergency relief, healthcare, ID documents, youth employment and family support, with source backed examples for the USA and Zimbabwe.",
     stack: [
       "Next.js",
       "React",
@@ -244,10 +245,10 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "CareNest — CeSHHAR MASCOT mHealth Tool",
-    type: "AI-Assisted Mobile Health Platform",
+    title: "CareNest: CeSHHAR MASCOT mHealth Tool",
+    type: "AI Assisted Mobile Health Platform",
     summary:
-      "A youth-friendly mHealth platform developed for the CeSHHAR Zimbabwe MASCOT Hackathon to support HIV prevention, pregnancy prevention, private AI-assisted guidance, urgent support, quizzes, anonymous community thoughts, and nearby health service discovery for college and university students.",
+      "A youth friendly mHealth platform developed for the CeSHHAR Zimbabwe MASCOT Hackathon to support HIV prevention, pregnancy prevention, private AI assisted guidance, urgent support, quizzes, anonymous community thoughts, and nearby health service discovery for college and university students.",
     stack: [
       "Flutter",
       "Dart",
@@ -256,7 +257,7 @@ export const projects: Project[] = [
       "Google Maps API",
       "OpenAI API",
       "AI Chatbot",
-      "Health-Tech",
+      "Health Tech",
       "Mobile UI/UX",
       "Accessibility",
     ],
@@ -275,7 +276,7 @@ export const projects: Project[] = [
     title: "Hollandsck Property Auction & Verification System (HPAVS)",
     type: "Full Stack Web Platform",
     summary:
-      "A live property auction and verification platform that enables secure property listings, OCR-based document verification, risk analysis, auction bidding, notifications, and intelligent property validation.",
+      "A live property auction and verification platform that enables secure property listings, OCR based document verification, risk analysis, auction bidding, notifications, and intelligent property validation.",
     stack: [
       "PHP",
       "MySQL",
@@ -291,9 +292,9 @@ export const projects: Project[] = [
   },
   {
     title: "ZAFM Church Management System",
-    type: "Web-Based Management System",
+    type: "Web Based Management System",
     summary:
-      "A web-based platform that helps churches manage member records, departments, events, announcements, and day-to-day administration.",
+      "A web based platform that helps churches manage member records, departments, events, announcements, and day to day administration.",
     stack: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "XAMPP"],
   },
   {
@@ -311,10 +312,10 @@ export const projects: Project[] = [
     stack: ["C#", "MySQL", "Windows Forms"],
   },
   {
-    title: "Low-Cost Water Heater",
+    title: "Low Cost Water Heater",
     type: "Engineering Innovation",
     summary:
-      "An affordable engineering solution designed for rural and peri-urban communities in Zimbabwe.",
+      "An affordable engineering solution designed for rural and peri urban communities in Zimbabwe.",
     stack: ["Engineering", "Innovation", "Community Impact"],
   },
   {
@@ -342,20 +343,20 @@ export const certificates: Certificate[] = [
     title: "MASCOT mHealth Hackathon 2026",
     issuer: "CeSHHAR Zimbabwe",
     description:
-      "Certificate of participation for developing CareNest, an AI-assisted mHealth platform built during the CeSHHAR Zimbabwe MASCOT Hackathon.",
+      "Certificate of participation for developing CareNest, an AI assisted mHealth platform built during the CeSHHAR Zimbabwe MASCOT Hackathon.",
     image: "/certificates/ceshhar-mascot-hackathon.jpeg",
   },
   {
     id: "usaii-global-hackathon",
-    title: "USAII Global Hackathon 2026 — Finalist",
+    title: "USAII Global Hackathon 2026 Finalist",
     issuer: "United States Artificial Intelligence Institute (USAII)",
     description:
-      "Named a finalist for building ServiceBridge AI, an AI-powered public benefits navigator, at the USAII Global Hackathon.",
+      "Named a finalist for building ServiceBridge AI, an AI powered public benefits navigator, at the USAII Global Hackathon.",
     image: "/certificates/usaii-global-hackathon.png",
   },
   {
     id: "nesari-competitions",
-    title: "NESARI 2026 — NetOne Topic 2",
+    title: "NESARI 2026: NetOne Topic 2",
     issuer: "NESARI Competitions · Masvingo",
     description:
       "For NetOne Dynamic Antenna Intelligence, an explainable antenna optimisation prototype presented with the GreenHex Team at NESARI 2026 in Masvingo.",
@@ -367,18 +368,18 @@ export const certificates: Certificate[] = [
 export const timeline: string[] = [
   "Bachelor's Honours Degree in Information Technology",
   "Background in Electronic Engineering concepts",
-  "Data Science Club member — hackathons, Kaggle and collaborative development",
+  "Data Science Club member: hackathons, Kaggle and collaborative development",
   "Property and rental management operations exposure",
-  "Health-tech innovation through the CeSHHAR Zimbabwe MASCOT Hackathon",
+  "Health tech innovation through the CeSHHAR Zimbabwe MASCOT Hackathon",
   "Finalist at the USAII Global Hackathon 2026 with ServiceBridge AI",
-  "Remote Software Developer at Codico Software Solutions (Jun – Jul 2026)",
+  "Remote Software Developer at Codico Software Solutions (Jun to Jul 2026)",
   "Telecom innovation: NetOne Dynamic Antenna Intelligence with the GreenHex Team at NESARI 2026, Masvingo",
-  "IT Intern at Prevsol Digital & Feltach Contracting (Sep 2026 – Sep 2027)",
+  "IT Intern at Prevsol Digital & Feltach Contracting (Sep 2026 to Sep 2027)",
 ];
 
 export const databaseExperience = {
   summary:
-    "I have practical and academic experience designing, developing and managing database-driven systems. Through university coursework, client work and personal projects, I have worked with relational databases, SQL, Firebase Firestore and backend system integration.",
+    "I have practical and academic experience designing, developing and managing database driven systems. Through university coursework, client work and personal projects, I have worked with relational databases, SQL, Firebase Firestore and backend system integration.",
   skills: [
     "Database Design and Modeling",
     "SQL Query Writing",
@@ -393,10 +394,10 @@ export const databaseExperience = {
     "Cloud Database Integration",
   ],
   practical: [
-    "Developed database-connected applications using MySQL.",
+    "Developed database connected applications using MySQL.",
     "Built systems that store, retrieve, update and manage user data efficiently.",
-    "Designed relational schemas and structured tables for real-world systems.",
-    "Implemented authentication, records management and form-based data handling.",
+    "Designed relational schemas and structured tables for real world systems.",
+    "Implemented authentication, records management and form based data handling.",
     "Integrated Firebase Firestore for live mobile app data such as service directory records, feedback and user features.",
   ],
 };

@@ -54,8 +54,8 @@ export default function Hero() {
           <p className="mt-4 font-display text-lg font-bold text-goldDeep sm:text-xl">{profile.role}</p>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
             A Zimbabwean Information Technology student building practical
-            digital solutions — web and mobile apps, databases and APIs,
-            data analysis and network-aware systems that solve real-world
+            digital solutions: web and mobile apps, databases and APIs,
+            data analysis and network aware systems that solve real world
             problems.
           </p>
 

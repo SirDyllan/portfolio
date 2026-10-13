@@ -65,7 +65,7 @@ export default function Experience() {
 
                 <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold text-cream/60">
                   <span className="inline-flex items-center gap-1.5">
-                    <CalendarDays size={13} /> {job.start} — {job.end}
+                    <CalendarDays size={13} /> {job.start} to {job.end}
                   </span>
                   <span className="inline-flex items-center gap-1.5">
                     <Briefcase size={13} /> {job.employmentType}
@@ -158,7 +158,7 @@ export default function Experience() {
 
       {galleryJob && galleryJob.gallery && (
         <GalleryModal
-          title={`${galleryJob.company} — work samples`}
+          title={`${galleryJob.company}: work samples`}
           images={galleryJob.gallery}
           onClose={() => setActiveGallery(null)}
         />

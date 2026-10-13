@@ -28,19 +28,19 @@ export default function About() {
           <div className="space-y-5 text-lg leading-relaxed text-muted">
             <p>
               I&apos;m an Information Technology student and software developer
-              from Zimbabwe, currently completing a 12-month IT internship at{" "}
+              from Zimbabwe, currently completing a 12 month IT internship at{" "}
               <strong className="text-ink">Prevsol Digital</strong> and its sister
               business <strong className="text-ink">Feltach Contracting</strong>.
             </p>
             <p>
               I build web and mobile applications, design databases and APIs,
-              and work across the full delivery cycle — from gathering
+              and work across the full delivery cycle, from gathering
               requirements to testing, documentation and deployment.
             </p>
             <p>
-              I&apos;m also a <strong className="text-ink">data analyst</strong>{" "}
-              — cleaning, analysing and visualising data with Python, Power BI
-              and Excel to support decisions — and I have a solid grounding in{" "}
+              I&apos;m also a <strong className="text-ink">data analyst</strong>,
+              cleaning, analysing and visualising data with Python, Power BI
+              and Excel to support decisions, and I have a solid grounding in{" "}
               <strong className="text-ink">networking</strong>: configuring,
               troubleshooting and supporting the networks that systems run on.
               My work has been recognised at the CeSHHAR Zimbabwe MASCOT

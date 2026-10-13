@@ -3,7 +3,7 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import { Code2, BarChart3, Network } from "lucide-react";
-import { profile, experience } from "@/lib/data";
+import { profile } from "@/lib/data";
 
 const d = (n: number) => ({ "--d": n }) as CSSProperties;
 
@@ -20,7 +20,6 @@ const chips = [
  */
 export default function PortraitReveal() {
   const [shown, setShown] = useState(false);
-  const current = experience.find((e) => e.current);
 
   useEffect(() => {
     // Two frames so the hidden state is painted before the transition starts
@@ -59,7 +58,7 @@ export default function PortraitReveal() {
           style={d(3)}
         >
           <p className="font-display text-sm font-extrabold text-ink">
-            {current ? `${current.role} at ${current.company}` : profile.role}
+            {profile.headline}
           </p>
           <p className="mt-0.5 flex items-center justify-center gap-2 text-xs font-semibold text-muted">
             <span className="h-2 w-2 rounded-full bg-green-500" />
