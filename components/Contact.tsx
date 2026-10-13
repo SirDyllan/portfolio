@@ -5,39 +5,38 @@ import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { profile } from "@/lib/data";
 
-type Status = "idle" | "sending" | "success" | "error";
+type Status = "idle" | "success" | "error";
+
+const EMAIL_RE = /^[^s@]+@[^s@]+.[^s@]+$/;
 
 export default function Contact() {
   const [status, setStatus] = useState<Status>("idle");
   const [feedback, setFeedback] = useState("");
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  // Opens the visitor's email app with the message pre-filled, so every
+  // message actually reaches the inbox without needing a mail backend.
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setStatus("sending");
 
-    const form = event.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
+    const data = new FormData(event.currentTarget);
+    const name = String(data.get("name") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      const json = await res.json();
-
-      if (res.ok) {
-        setStatus("success");
-        setFeedback(json.message);
-        form.reset();
-      } else {
-        setStatus("error");
-        setFeedback(json.message ?? "Please check the form and try again.");
-      }
-    } catch {
+    if (!name || !message || !EMAIL_RE.test(email)) {
       setStatus("error");
-      setFeedback("Something went wrong. Please email me directly instead.");
+      setFeedback("Please complete all fields with a valid email address.");
+      return;
     }
+
+    const subject = `Portfolio enquiry from ${name}`;
+    const body = `${message}
+
+— ${name} (${email})`;
+    window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    setStatus("success");
+    setFeedback(`Your email app should now open with the message ready to send. If it doesn't, email me directly at ${profile.email}.`);
   }
 
   return (
@@ -50,17 +49,22 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
         >
           <p className="eyebrow">Let&apos;s work together</p>
-          <h2 className="mt-3 font-display text-5xl font-black text-ink">
+          <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl text-ink">
             Contact<span className="text-gold">.</span>
           </h2>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-1">
+          <p className="mt-5 max-w-md text-base leading-relaxed text-muted">
+            Open to internships, graduate roles, freelance projects and
+            collaborations. I usually reply within a day.
+          </p>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <a
               href={`mailto:${profile.email}`}
-              className="rounded-xl border border-line bg-white p-5 shadow-sm transition hover:border-gold hover:shadow-md"
+              className="rounded-xl border border-line bg-white p-5 shadow-sm transition hover:border-gold hover:shadow-md sm:col-span-2"
             >
               <small className="text-xs font-bold uppercase tracking-widest text-muted">Email</small>
-              <p className="mt-1 font-display text-base font-bold text-ink">{profile.email}</p>
+              <p className="mt-1 break-all font-display text-base font-bold text-ink">{profile.email}</p>
             </a>
             <a
               href={`tel:${profile.phoneHref}`}
@@ -77,6 +81,15 @@ export default function Contact() {
             >
               <small className="text-xs font-bold uppercase tracking-widest text-muted">LinkedIn</small>
               <p className="mt-1 font-display text-base font-bold text-ink">View Profile</p>
+            </a>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl border border-line bg-white p-5 shadow-sm transition hover:border-gold hover:shadow-md"
+            >
+              <small className="text-xs font-bold uppercase tracking-widest text-muted">GitHub</small>
+              <p className="mt-1 font-display text-base font-bold text-ink">@SirDyllan</p>
             </a>
           </div>
         </motion.div>
@@ -122,12 +135,11 @@ export default function Contact() {
 
           <motion.button
             type="submit"
-            disabled={status === "sending"}
-            whileHover={{ scale: 1.03 }}
+                        whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 font-display text-sm font-bold text-cream transition hover:bg-goldDeep hover:text-ink disabled:opacity-60"
           >
-            {status === "sending" ? "Sending..." : "Send Message"} <Send size={15} />
+            Send Message <Send size={15} />
           </motion.button>
 
           {status === "success" && (

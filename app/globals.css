@@ -1,9 +1,70 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-* {
+@theme {
+  --color-cream: #f5f1e7;
+  --color-creamAlt: #ede8d9;
+  --color-ink: #1a1a1d;
+  --color-inkSoft: #2a2a2e;
+  --color-gold: #f0a83a;
+  --color-goldDeep: #db8f1f;
+  --color-goldSoft: #f7c878;
+  --color-muted: #6e6b62;
+  --color-mutedLight: #a8a49a;
+  --color-line: rgba(26, 26, 29, 0.1);
+  --color-lineOnDark: rgba(245, 241, 231, 0.12);
+
+  --font-display: var(--font-archivo), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --animate-blobMove: blobMove 10s ease-in-out infinite;
+  --animate-drift: drift 6s ease-in-out infinite;
+  --animate-ping1: ping1 2.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+  @keyframes blobMove {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(20px, -25px) scale(1.08);
+    }
+    66% {
+      transform: translate(-15px, 15px) scale(0.95);
+    }
+  }
+  @keyframes drift {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(-2deg);
+    }
+  }
+  @keyframes ping1 {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2.2);
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -14,6 +75,15 @@ body {
 ::selection {
   background: #f0a83a;
   color: #1a1a1d;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid #db8f1f;
+  outline-offset: 3px;
 }
 
 .eyebrow {
@@ -85,6 +155,9 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   *,
   *::before,
   *::after {

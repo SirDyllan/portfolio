@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { quickFacts } from "@/lib/data";
 
 export default function About() {
   return (
@@ -12,9 +13,9 @@ export default function About() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="eyebrow">About</p>
-          <h2 className="mt-3 font-display text-5xl font-black text-ink">
-            Hello<span className="text-gold">.</span>
+          <p className="eyebrow">About me</p>
+          <h2 className="mt-3 font-display text-4xl font-black text-ink sm:text-5xl">
+            Developer by trade, designer at heart<span className="text-gold">.</span>
           </h2>
         </motion.div>
         <motion.div
@@ -22,18 +23,34 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="corner-card space-y-5 border border-line bg-white p-8 text-lg leading-relaxed text-muted shadow-sm sm:p-10"
+          className="corner-card border border-line bg-white p-8 shadow-sm sm:p-10"
         >
-          <p>
-            I am passionate about technology, innovation, problem solving,
-            software development, databases, data science, analytics, mobile
-            app development, and building practical digital solutions that
-            solve real-world African problems.
-          </p>
-          <p>
-            My goal is to grow as a serious upcoming IT professional, software
-            developer, data enthusiast, and future technology entrepreneur.
-          </p>
+          <div className="space-y-5 text-lg leading-relaxed text-muted">
+            <p>
+              I&apos;m an Information Technology student and software developer
+              from Zimbabwe, currently completing a 12-month IT internship at{" "}
+              <strong className="text-ink">Prevsol Digital</strong> and its sister
+              business <strong className="text-ink">Feltach Contracting</strong>.
+            </p>
+            <p>
+              I build web and mobile applications, design database-driven systems
+              and create brand visuals — combining development, data and design
+              to deliver practical solutions to real-world African problems. My
+              work has been recognised at the CeSHHAR Zimbabwe MASCOT Hackathon,
+              the USAII Global Hackathon and the Nesari Competitions.
+            </p>
+          </div>
+
+          <dl className="mt-8 grid gap-4 border-t border-line pt-6 sm:grid-cols-2">
+            {quickFacts.map((fact) => (
+              <div key={fact.label}>
+                <dt className="text-xs font-bold uppercase tracking-widest text-goldDeep">
+                  {fact.label}
+                </dt>
+                <dd className="mt-1 font-display text-base font-bold text-ink">{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
         </motion.div>
       </div>
     </section>

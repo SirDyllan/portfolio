@@ -5,10 +5,10 @@ import { databaseExperience } from "@/lib/data";
 
 export default function Databases() {
   return (
-    <section id="databases" className="section-pad bg-creamAlt">
+    <section id="databases" className="section-pad">
       <div className="mx-auto max-w-6xl px-6">
         <p className="eyebrow">Database systems experience</p>
-        <h2 className="mt-3 font-display text-5xl font-black text-ink">
+        <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl text-ink">
           Database Systems<span className="text-gold">.</span>
         </h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
@@ -47,7 +47,7 @@ export default function Databases() {
                   {card.body.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full bg-creamAlt px-3 py-1.5 text-xs font-semibold text-ink"
+                      className="rounded-full bg-cream px-3 py-1.5 text-xs font-semibold text-ink"
                     >
                       {skill}
                     </span>

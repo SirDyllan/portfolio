@@ -1,15 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
+import { profile } from "@/lib/data";
 import Logo from "./Logo";
 
 const links = [
   { href: "#about", label: "About", id: "about" },
-  { href: "#skills", label: "Skills", id: "skills" },
-  { href: "#databases", label: "Databases", id: "databases" },
+  { href: "#experience", label: "Experience", id: "experience" },
   { href: "#projects", label: "Projects", id: "projects" },
-  { href: "#cv", label: "CV", id: "cv" },
+  { href: "#skills", label: "Skills", id: "skills" },
+  { href: "#certifications", label: "Certifications", id: "certifications" },
   { href: "#contact", label: "Contact", id: "contact" },
 ];
 
@@ -45,7 +46,7 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-6 md:flex">
           {links.map((link) => (
             <a
               key={link.href}
@@ -61,6 +62,14 @@ export default function Header() {
             </a>
           ))}
         </nav>
+
+        <a
+          href={profile.cv}
+          download
+          className="hidden items-center gap-2 rounded-full bg-ink px-4 py-2 font-display text-xs font-bold text-cream transition hover:bg-goldDeep hover:text-ink lg:inline-flex"
+        >
+          <Download size={14} /> CV
+        </a>
 
         <button
           type="button"
@@ -86,6 +95,13 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
+            <a
+              href={profile.cv}
+              download
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-ink px-4 py-2 font-display text-sm font-bold text-cream"
+            >
+              <Download size={14} /> Download CV
+            </a>
           </div>
         </nav>
       )}

@@ -18,12 +18,12 @@ export default function CV() {
           <p className="text-xs font-bold uppercase tracking-widest text-ink/70">
             Recruiter ready
           </p>
-          <h2 className="mt-3 font-display text-5xl font-black text-ink">
+          <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl text-ink">
             Download My CV<span className="text-cream">.</span>
           </h2>
           <p className="mt-3 max-w-md text-sm leading-relaxed text-ink/75">
-            Get my CV for internships, attachments, freelance opportunities,
-            and junior technology roles.
+            Get my latest CV for internships, graduate roles, freelance
+            opportunities and junior technology positions.
           </p>
         </motion.div>
 

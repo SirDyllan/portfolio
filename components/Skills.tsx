@@ -5,14 +5,14 @@ import { skills } from "@/lib/data";
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-pad">
+    <section id="skills" className="section-pad bg-creamAlt">
       <div className="mx-auto max-w-6xl px-6">
-        <p className="eyebrow">Software skill</p>
-        <h2 className="mt-3 font-display text-5xl font-black text-ink">
+        <p className="eyebrow">What I work with</p>
+        <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl text-ink">
           Technical Stack<span className="text-gold">.</span>
         </h2>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {Object.entries(skills).map(([group, items], i) => (
             <motion.article
               key={group}

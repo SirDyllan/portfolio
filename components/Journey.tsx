@@ -5,10 +5,10 @@ import { timeline } from "@/lib/data";
 
 export default function Journey() {
   return (
-    <section className="section-pad bg-ink">
+    <section id="journey" className="section-pad bg-ink">
       <div className="mx-auto max-w-6xl px-6">
-        <p className="eyebrow eyebrow-dark">Education & Activity</p>
-        <h2 className="mt-3 font-display text-5xl font-black text-cream">
+        <p className="eyebrow eyebrow-dark">Education & milestones</p>
+        <h2 className="mt-3 font-display text-4xl font-black sm:text-5xl text-cream">
           My Journey<span className="text-gold">.</span>
         </h2>
 

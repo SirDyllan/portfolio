@@ -40,7 +40,7 @@ export default function CertificateModal({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.94, y: 12 }}
           transition={{ type: "spring", stiffness: 300, damping: 26 }}
-          className="relative w-full max-w-lg rounded-2xl border border-line bg-white p-6 shadow-2xl"
+          className="relative w-full max-w-2xl rounded-2xl border border-line bg-white p-6 shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
           <button
@@ -56,15 +56,17 @@ export default function CertificateModal({
           <h3 className="mt-2 font-display text-2xl font-bold text-ink">{certificate.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted">{certificate.description}</p>
 
-          <div className="mt-5 overflow-hidden rounded-xl border border-line bg-creamAlt">
-            <Image
-              src={certificate.image}
-              alt={`${certificate.title} certificate`}
-              width={800}
-              height={600}
-              className="h-auto w-full object-contain"
-            />
-          </div>
+          {certificate.image && (
+            <div className="mt-5 overflow-hidden rounded-xl border border-line bg-creamAlt">
+              <Image
+                src={certificate.image}
+                alt={`${certificate.title} certificate`}
+                width={800}
+                height={600}
+                className="h-auto w-full object-contain"
+              />
+            </div>
+          )}
         </motion.div>
       </motion.div>
     </AnimatePresence>
