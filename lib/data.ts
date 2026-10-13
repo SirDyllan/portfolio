@@ -16,7 +16,6 @@ export const profile = {
   name: "Dyllan Mutsereketa",
   brand: "Dyllan Mutsereketa",
   role: "Software Developer · Data Analyst",
-  headline: "IT Intern at Prevsol Digital",
   location: "Zimbabwe",
   email: "dyllanmutsereketa@gmail.com",
   phone: "+263 78 036 8715",
