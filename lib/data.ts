@@ -15,7 +15,7 @@
 export const profile = {
   name: "Dyllan Mutsereketa",
   brand: "Dyllan Mutsereketa",
-  role: "Software Developer · Graphic Designer",
+  role: "Software Developer · Data Analyst · Networking",
   headline: "IT Intern at Prevsol Digital",
   location: "Zimbabwe",
   email: "dyllanmutsereketa@gmail.com",
@@ -33,7 +33,7 @@ export const quickFacts: { label: string; value: string }[] = [
   { label: "Based in", value: "Zimbabwe" },
   { label: "Currently", value: "IT Intern · Prevsol Digital" },
   { label: "Studying", value: "BSc (Hons) Information Technology" },
-  { label: "Focus", value: "Web, Mobile, Data & Design" },
+  { label: "Focus", value: "Software, Data Analysis & Networking" },
 ];
 
 export type Experience = {
@@ -69,10 +69,12 @@ export const experience: Experience[] = [
     summary:
       "Industrial attachment with Prevsol Digital, a technology, innovation and digitalization company. My contract is held under Prevsol Digital and I also support its sister business, Feltach Contracting.",
     highlights: [
-      "Contributing to software, web and digital solutions delivered for Prevsol Digital and its clients.",
-      "Providing IT support, systems administration and day-to-day technical assistance across both businesses.",
-      "Supporting Feltach Contracting with its digital presence, documentation and technology needs.",
-      "Applying graphic design skills to branded visuals and digital marketing content.",
+      "Gathering and documenting user requirements; preparing process flows, wireframes and technical specifications.",
+      "Designing and developing approved applications, databases, APIs and integrations.",
+      "Writing maintainable code in the organisation's approved tools, using version control and following code review procedures.",
+      "Testing, debugging and recording defects before work is released to production.",
+      "Preparing user and technical documentation, and supporting deployment, maintenance and user training.",
+      "Reporting progress, blockers and risks to my supervisor, who reviews work before release.",
     ],
     partners: [
       {
@@ -81,7 +83,7 @@ export const experience: Experience[] = [
         note: "Sister business — supported under the same contract",
       },
     ],
-    tags: ["Software Development", "IT Support", "Web", "Digital Transformation", "Graphic Design"],
+    tags: ["Requirements Analysis", "Software Development", "Databases & APIs", "Version Control", "Testing & QA", "Documentation", "Deployment"],
     // Drop photos into public/images/experience/prevsol/ and list them here,
     // e.g. "/images/experience/prevsol/team.jpg"
     gallery: undefined,
@@ -89,20 +91,19 @@ export const experience: Experience[] = [
   {
     company: "Codico Software Solutions",
     logo: "/logos/codico-software-solutions.png",
-    role: "Graphic Designer & Software Developer",
+    role: "Software Developer & Graphic Designer",
     employmentType: "Contract · 2 months",
     location: "Remote",
     start: "Jun 2026",
     end: "Jul 2026",
     summary:
-      "Worked remotely across design and development — producing brand visuals and marketing creatives while contributing to software and UI work for the company and its clients.",
+      "Remote role contributing to software development and UI work for the company and its clients, alongside design support.",
     highlights: [
-      "Designed branded visuals, flyers and social media creatives in Adobe Photoshop.",
-      "Produced UI/UX concepts and interface mockups in Figma.",
-      "Scheduled and managed social content through Meta Business Suite.",
       "Contributed to software development tasks and front-end implementation.",
+      "Produced UI/UX concepts and interface mockups in Figma.",
+      "Supported the team with branded visuals and digital content.",
     ],
-    tags: ["Adobe Photoshop", "Figma", "Meta Business Suite", "UI/UX Design", "Software Development"],
+    tags: ["Software Development", "Front-end", "UI/UX", "Figma", "Adobe Photoshop"],
     gallery: [
       "/images/projects/codico/a.jpeg",
       "/images/projects/codico/b.jpeg",
@@ -167,14 +168,14 @@ export const skills: Record<string, string[]> = {
     "OpenAI API",
     "Namecheap Hosting",
   ],
-  "Design & Marketing": [
-    "Adobe Photoshop",
-    "Figma",
-    "Meta Business Suite",
-    "Graphic Design",
-    "UI/UX Design",
-    "Social Media Management",
+  "Networking & IT Support": [
+    "Cisco Packet Tracer",
+    "Network Configuration",
+    "LAN Setup & Troubleshooting",
+    "TCP/IP & Subnetting",
+    "IT Support",
   ],
+  Design: ["Figma", "UI/UX Design", "Adobe Photoshop"],
 };
 
 export type Project = {
@@ -201,11 +202,21 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "NetOne Dynamic Antenna Intelligence",
-    type: "Telecom Network Intelligence · Nesari Competitions",
+    type: "Explainable AI Antenna Optimisation · NESARI 2026",
     summary:
-      "A competition project built for the Nesari Competitions around NetOne's mobile network. It explores dynamic antenna intelligence — using network data and analytics to monitor antenna performance and support smarter, data-driven coverage and capacity decisions. To be presented at the Nesari Competitions event in Masvingo.",
-    stack: ["Telecommunications", "Network Intelligence", "Data Analytics", "Innovation"],
-    status: "Nesari Competitions · Masvingo",
+      "Built with the GreenHex Team for NetOne Topic 2 at the NESARI 2026 competition in Masvingo. A software-first prototype that scans 72 directions of simulated network demand, forecasts where demand is heading, and recommends a safe antenna azimuth and tilt — explaining every decision and choosing HOLD when its forecast is unreliable or the gain is too small. A live dashboard compares fixed, busiest-direction and forecast-aware strategies, verifies results on unseen data, with a virtual Arduino servo demo in Tinkercad showing the actuator idea.",
+    stack: [
+      "Python",
+      "Flask",
+      "JavaScript",
+      "HTML & CSS",
+      "Forecasting",
+      "Explainable AI",
+      "Arduino",
+      "Tinkercad",
+      "Telecommunications",
+    ],
+    status: "NESARI 2026 · Masvingo",
     certificateId: "nesari-competitions",
     featured: true,
     // Drop event photos into public/images/projects/netone/ then list them here,
@@ -345,10 +356,10 @@ export const certificates: Certificate[] = [
   },
   {
     id: "nesari-competitions",
-    title: "Nesari Competitions — NetOne Challenge",
-    issuer: "Nesari Competitions · Masvingo",
+    title: "NESARI 2026 — NetOne Topic 2",
+    issuer: "NESARI Competitions · Masvingo",
     description:
-      "For the NetOne Dynamic Antenna Intelligence project presented at the Nesari Competitions in Masvingo.",
+      "For NetOne Dynamic Antenna Intelligence, an explainable antenna optimisation prototype presented with the GreenHex Team at NESARI 2026 in Masvingo.",
     // Add the certificate later: drop it into public/certificates/ and set
     // image: "/certificates/nesari-competitions.jpg",
   },
@@ -361,8 +372,8 @@ export const timeline: string[] = [
   "Property and rental management operations exposure",
   "Health-tech innovation through the CeSHHAR Zimbabwe MASCOT Hackathon",
   "Finalist at the USAII Global Hackathon 2026 with ServiceBridge AI",
-  "Remote Graphic Designer & Software Developer at Codico Software Solutions (Jun – Jul 2026)",
-  "Telecom innovation: NetOne Dynamic Antenna Intelligence for the Nesari Competitions, Masvingo",
+  "Remote Software Developer at Codico Software Solutions (Jun – Jul 2026)",
+  "Telecom innovation: NetOne Dynamic Antenna Intelligence with the GreenHex Team at NESARI 2026, Masvingo",
   "IT Intern at Prevsol Digital & Feltach Contracting (Sep 2026 – Sep 2027)",
 ];
 

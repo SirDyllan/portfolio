@@ -14,9 +14,9 @@ const body = Inter({
   variable: "--font-inter",
 });
 
-const title = "Dyllan Mutsereketa — Software Developer, Designer & IT Intern";
+const title = "Dyllan Mutsereketa — Software Developer, Data Analyst & IT Intern";
 const description =
-  "Portfolio of Dyllan Mutsereketa, a Zimbabwean software developer and graphic designer currently working as an IT Intern at Prevsol Digital. Web, mobile, data and design projects.";
+  "Portfolio of Dyllan Mutsereketa, a Zimbabwean software developer and data analyst with a networking background, currently an IT Intern at Prevsol Digital. Web, mobile, data and AI projects.";
 
 export const metadata: Metadata = {
   title,
@@ -26,7 +26,8 @@ export const metadata: Metadata = {
   keywords: [
     "Dyllan Mutsereketa",
     "Software Developer",
-    "Graphic Designer",
+    "Data Analyst",
+    "Networking",
     "IT Intern",
     "Zimbabwe",
     "Portfolio",
@@ -57,7 +58,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="en" className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Marks JS as available so reveal animations can start hidden */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
       <body className="font-body antialiased">{children}</body>
     </html>
   );

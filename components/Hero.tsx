@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Download, ArrowRight } from "lucide-react";
 import { profile, projects, certificates, experience } from "@/lib/data";
+import PortraitReveal from "./PortraitReveal";
 
 const stats = [
   { value: `${projects.length}+`, label: "Projects built" },
@@ -22,7 +23,7 @@ export default function Hero() {
         style={{ animationDelay: "3s" }}
       />
 
-      <div className="mx-auto grid max-w-6xl gap-16 px-6 md:grid-cols-[1.15fr_0.85fr] md:items-center">
+      <div className="mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,8 +54,9 @@ export default function Hero() {
           <p className="mt-4 font-display text-lg font-bold text-goldDeep sm:text-xl">{profile.role}</p>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
             A Zimbabwean Information Technology student building practical
-            digital solutions — web and mobile apps, data-driven systems and
-            brand visuals that solve real-world problems.
+            digital solutions — web and mobile apps, databases and APIs,
+            data analysis and network-aware systems that solve real-world
+            problems.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -78,6 +80,17 @@ export default function Hero() {
             </a>
 
             <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              title="LinkedIn"
+              className="inline-flex h-[50px] w-[50px] items-center justify-center rounded-full border border-ink/20 bg-white transition hover:border-ink"
+            >
+              <Image src="/icons/linkedin.png" alt="" width={24} height={24} className="h-6 w-6" />
+            </a>
+
+            <a
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full px-4 py-3.5 font-display text-sm font-semibold text-ink underline decoration-gold decoration-2 underline-offset-4 transition hover:text-goldDeep"
             >
@@ -98,49 +111,7 @@ export default function Hero() {
           </dl>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-          className="relative mx-auto flex w-full max-w-sm items-center justify-center py-6"
-        >
-          <div className="absolute right-2 top-0 h-[300px] w-[220px] rounded-[8rem] bg-gold sm:h-[340px] sm:w-[250px]" />
-          <div className="absolute -left-6 top-8 h-56 w-56 rounded-full border-2 border-ink/80" />
-
-          <div className="relative aspect-square w-56 overflow-hidden rounded-full border-[6px] border-cream shadow-2xl sm:w-64">
-            <Image
-              src={profile.photo}
-              alt={`Portrait of ${profile.name}`}
-              fill
-              sizes="256px"
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          <div className="absolute bottom-0 left-1/2 w-56 -translate-x-1/2 translate-y-6 rounded-2xl border border-line bg-white p-4 shadow-xl sm:w-64">
-            <p className="text-xs font-semibold uppercase tracking-widest text-muted">
-              {profile.headline}
-            </p>
-            <p className="font-display text-base font-extrabold text-ink">{profile.location}</p>
-          </div>
-
-          <span className="absolute -left-2 top-2 animate-drift rounded-full border border-line bg-white px-3 py-1.5 font-display text-xs font-bold text-ink shadow-lg">
-            DEV
-          </span>
-          <span
-            className="absolute right-0 top-1/2 animate-drift rounded-full border border-line bg-white px-3 py-1.5 font-display text-xs font-bold text-ink shadow-lg"
-            style={{ animationDelay: "1.4s" }}
-          >
-            DATA
-          </span>
-          <span
-            className="absolute -left-8 bottom-16 animate-drift rounded-full border border-line bg-white px-3 py-1.5 font-display text-xs font-bold text-ink shadow-lg"
-            style={{ animationDelay: "2.6s" }}
-          >
-            DESIGN
-          </span>
-        </motion.div>
+        <PortraitReveal />
       </div>
     </section>
   );

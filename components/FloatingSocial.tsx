@@ -6,6 +6,11 @@ import { profile } from "@/lib/data";
 
 const items = [
   {
+    href: profile.linkedin,
+    label: "Connect on LinkedIn",
+    icon: "/icons/linkedin.png",
+  },
+  {
     href: profile.whatsapp,
     label: "Chat on WhatsApp",
     icon: "/icons/whatsapp.png",

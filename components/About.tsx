@@ -15,7 +15,7 @@ export default function About() {
         >
           <p className="eyebrow">About me</p>
           <h2 className="mt-3 font-display text-4xl font-black text-ink sm:text-5xl">
-            Developer by trade, designer at heart<span className="text-gold">.</span>
+            Building software that solves real problems<span className="text-gold">.</span>
           </h2>
         </motion.div>
         <motion.div
@@ -33,11 +33,18 @@ export default function About() {
               business <strong className="text-ink">Feltach Contracting</strong>.
             </p>
             <p>
-              I build web and mobile applications, design database-driven systems
-              and create brand visuals — combining development, data and design
-              to deliver practical solutions to real-world African problems. My
-              work has been recognised at the CeSHHAR Zimbabwe MASCOT Hackathon,
-              the USAII Global Hackathon and the Nesari Competitions.
+              I build web and mobile applications, design databases and APIs,
+              and work across the full delivery cycle — from gathering
+              requirements to testing, documentation and deployment.
+            </p>
+            <p>
+              I&apos;m also a <strong className="text-ink">data analyst</strong>{" "}
+              — cleaning, analysing and visualising data with Python, Power BI
+              and Excel to support decisions — and I have a solid grounding in{" "}
+              <strong className="text-ink">networking</strong>: configuring,
+              troubleshooting and supporting the networks that systems run on.
+              My work has been recognised at the CeSHHAR Zimbabwe MASCOT
+              Hackathon, the USAII Global Hackathon (finalist) and NESARI 2026.
             </p>
           </div>
 

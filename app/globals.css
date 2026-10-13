@@ -19,6 +19,18 @@
   --animate-blobMove: blobMove 10s ease-in-out infinite;
   --animate-drift: drift 6s ease-in-out infinite;
   --animate-ping1: ping1 2.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -14px, 0);
+    }
+  }
 
   @keyframes blobMove {
     0%,
@@ -154,7 +166,58 @@ button:not(:disabled) {
   display: none;
 }
 
+/* Hero portrait: curtain wipe + zoom-out on reveal, then a gentle float.
+   Only hidden when JS is running (html.js), so the photo always shows without it. */
+.js .spot-frame {
+  clip-path: inset(100% 0 0 0 round 32px);
+  transition: clip-path 1.3s cubic-bezier(0.7, 0, 0.2, 1) 0.2s;
+}
+.js .spot-img {
+  transform: scale(1.18);
+  transition: transform 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s;
+}
+.js .spot-panel {
+  transform: translate3d(-12%, 12%, 0) rotate(-6deg);
+  opacity: 0;
+  transition:
+    transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s,
+    opacity 0.8s ease 0.35s;
+}
+.js .spot-chip {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0) scale(0.9);
+  transition:
+    opacity 0.6s ease,
+    transform 0.7s cubic-bezier(0.3, 1.6, 0.5, 1);
+  transition-delay: calc(1100ms + var(--d, 0) * 160ms);
+}
+.js [data-shown] .spot-frame {
+  clip-path: inset(0 0 0 0 round 32px);
+}
+.js [data-shown] .spot-img {
+  transform: scale(1);
+}
+.js [data-shown] .spot-panel {
+  transform: rotate(-6deg);
+  opacity: 1;
+}
+.js [data-shown] .spot-chip {
+  opacity: 1;
+  transform: none;
+}
+/* The caption chip is centred with translate, so keep that while animating */
+.js .spot-chip.-translate-x-1/2 {
+  transform: translate3d(-50%, 18px, 0) scale(0.9);
+}
+.js [data-shown] .spot-chip.-translate-x-1/2 {
+  transform: translate3d(-50%, 0, 0);
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .js .spot-frame {
+    clip-path: none;
+  }
+
   html {
     scroll-behavior: auto;
   }

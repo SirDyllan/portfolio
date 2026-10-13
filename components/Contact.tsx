@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { profile } from "@/lib/data";
@@ -80,7 +81,10 @@ export default function Contact() {
               className="rounded-xl border border-line bg-white p-5 shadow-sm transition hover:border-gold hover:shadow-md"
             >
               <small className="text-xs font-bold uppercase tracking-widest text-muted">LinkedIn</small>
-              <p className="mt-1 font-display text-base font-bold text-ink">View Profile</p>
+              <p className="mt-1 flex items-center gap-2 font-display text-base font-bold text-ink">
+                <Image src="/icons/linkedin.png" alt="" width={20} height={20} className="h-5 w-5" />
+                View Profile
+              </p>
             </a>
             <a
               href={profile.github}
