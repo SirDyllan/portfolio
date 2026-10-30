@@ -16,7 +16,7 @@ export const profile = {
   name: "Dyllan Mutsereketa",
   brand: "Dyllan Mutsereketa",
   role: "Software Developer · Data Analyst",
-  headline: "IT Intern at Prevsol Digital",
+  headline: "IT Intern at Feltach Contracting",
   location: "Zimbabwe",
   email: "dyllanmutsereketa@gmail.com",
   phone: "+263 78 036 8715",
@@ -31,7 +31,7 @@ export const profile = {
 
 export const quickFacts: { label: string; value: string }[] = [
   { label: "Based in", value: "Zimbabwe" },
-  { label: "Currently", value: "IT Intern · Prevsol Digital" },
+  { label: "Currently", value: "IT Intern · Feltach Contracting" },
   { label: "Studying", value: "BSc (Hons) Information Technology" },
   { label: "Focus", value: "Software, Data Analysis & Networking" },
 ];
@@ -58,8 +58,8 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    company: "Prevsol Digital",
-    logo: "/logos/prevsol-digital.png",
+    company: "Feltach Contracting",
+    logo: "/logos/feltach-contracting.svg",
     role: "IT Intern · Procurement & Data Analytics",
     employmentType: "Internship · 12 month contract",
     location: "Zimbabwe · On site",
@@ -67,7 +67,7 @@ export const experience: Experience[] = [
     end: "Sep 28, 2027",
     current: true,
     summary:
-      "Industrial attachment with Prevsol Digital, a technology, innovation and digitalization company. My contract is held under Prevsol Digital and I also support its sister business, Feltach Contracting. My role spans software development, IT procurement and data analytics, and I help build the partnerships that move the business forward.",
+      "Industrial attachment with Feltach Contracting, the main business, where I also support its sister business Prevsol Digital, a technology, innovation and digitalization company. My role spans software development, IT procurement and data analytics, and I help build the partnerships that move the business forward.",
     highlights: [
       "Gathering and documenting user requirements; preparing process flows, wireframes and technical specifications.",
       "Designing and developing approved applications, databases, APIs and integrations.",
@@ -81,8 +81,8 @@ export const experience: Experience[] = [
     ],
     partners: [
       {
-        name: "Feltach Contracting",
-        logo: "/logos/feltach-contracting.svg",
+        name: "Prevsol Digital",
+        logo: "/logos/prevsol-digital.png",
         note: "Sister business, supported under the same contract",
       },
     ],
@@ -377,7 +377,7 @@ export const timeline: string[] = [
   "Finalist at the USAII Global Hackathon 2026 with ServiceBridge AI",
   "Remote Software Developer at Codico Software Solutions (Jun to Jul 2026)",
   "Telecom innovation: NetOne Dynamic Antenna Intelligence with the GreenHex Team at NESARI 2026, Masvingo",
-  "IT Intern at Prevsol Digital & Feltach Contracting (Sep 2026 to Sep 2027)",
+  "IT Intern at Feltach Contracting & Prevsol Digital (Sep 2026 to Sep 2027)",
 ];
 
 export const databaseExperience = {

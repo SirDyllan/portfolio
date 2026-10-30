@@ -1,6 +1,6 @@
 # Dyllan Mutsereketa — Portfolio
 
-Personal portfolio of Dyllan Mutsereketa — software developer, graphic designer and IT Intern at Prevsol Digital.
+Personal portfolio of Dyllan Mutsereketa — software developer, graphic designer and IT Intern at Feltach Contracting.
 
 ## Stack
 
