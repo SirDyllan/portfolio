@@ -60,20 +60,23 @@ export const experience: Experience[] = [
   {
     company: "Prevsol Digital",
     logo: "/logos/prevsol-digital.png",
-    role: "IT Intern",
+    role: "IT Intern · Procurement & Data Analytics",
     employmentType: "Internship · 12 month contract",
     location: "Zimbabwe · On site",
     start: "Sep 28, 2026",
     end: "Sep 28, 2027",
     current: true,
     summary:
-      "Industrial attachment with Prevsol Digital, a technology, innovation and digitalization company. My contract is held under Prevsol Digital and I also support its sister business, Feltach Contracting.",
+      "Industrial attachment with Prevsol Digital, a technology, innovation and digitalization company. My contract is held under Prevsol Digital and I also support its sister business, Feltach Contracting. My role spans software development, IT procurement and data analytics, and I help build the partnerships that move the business forward.",
     highlights: [
       "Gathering and documenting user requirements; preparing process flows, wireframes and technical specifications.",
       "Designing and developing approved applications, databases, APIs and integrations.",
       "Writing maintainable code in the organisation's approved tools, using version control and following code review procedures.",
       "Testing, debugging and recording defects before work is released to production.",
       "Preparing user and technical documentation, and supporting deployment, maintenance and user training.",
+      "Handling IT procurement: sourcing and evaluating suppliers, many of them based in the UAE, and preparing submissions for tenders.",
+      "Analysing business data and turning it into reports and insights that guide decisions.",
+      "Negotiating with mining companies, organisations and NGOs to build partnerships and grow the business.",
       "Reporting progress, blockers and risks to my supervisor, who reviews work before release.",
     ],
     partners: [
@@ -83,7 +86,7 @@ export const experience: Experience[] = [
         note: "Sister business, supported under the same contract",
       },
     ],
-    tags: ["Requirements Analysis", "Software Development", "Databases & APIs", "Version Control", "Testing & QA", "Documentation", "Deployment"],
+    tags: ["Requirements Analysis", "Software Development", "Databases & APIs", "Version Control", "Testing & QA", "Documentation", "Deployment", "IT Procurement", "Supplier Sourcing", "Tenders", "Data Analytics", "Negotiation"],
     // Drop photos into public/images/experience/prevsol/ and list them here,
     // e.g. "/images/experience/prevsol/team.jpg"
     gallery: undefined,
