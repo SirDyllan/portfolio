@@ -27,6 +27,7 @@ export default function CV() {
           </p>
         </motion.div>
 
+        <div className="flex flex-wrap items-center gap-3">
         <motion.a
           href={profile.cv}
           download
@@ -37,8 +38,16 @@ export default function CV() {
         >
           <Download size={18} className="transition-transform group-hover:-translate-y-0.5" />
           <span>Download CV</span>
-          <strong className="rounded-full bg-cream/15 px-2 py-0.5 text-xs">DOCX</strong>
+          <strong className="rounded-full bg-cream/15 px-2 py-0.5 text-xs">PDF</strong>
         </motion.a>
+        <a
+          href={profile.cvDocx}
+          download
+          className="inline-flex items-center gap-2 rounded-full border-2 border-ink px-6 py-3.5 font-display text-sm font-bold text-ink transition hover:bg-ink hover:text-cream"
+        >
+          <Download size={16} /> Word
+        </a>
+        </div>
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import Marquee from "@/components/Marquee";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Journey from "@/components/Journey";
+import Results from "@/components/Results";
 import Skills from "@/components/Skills";
 import Databases from "@/components/Databases";
 import Projects from "@/components/Projects";
@@ -28,6 +29,7 @@ export default function Home() {
         <Skills />
         <Databases />
         <Journey />
+        <Results />
         <Certifications />
         <CV />
         <Contact />

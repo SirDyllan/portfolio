@@ -8,7 +8,7 @@ import PortraitReveal from "./PortraitReveal";
 
 const stats = [
   { value: `${projects.length}+`, label: "Projects built" },
-  { value: `${certificates.length}`, label: "Hackathons & competitions" },
+  { value: `${certificates.length}`, label: "Certificates & awards" },
   { value: `${experience.reduce((n, e) => n + 1 + (e.partners?.length ?? 0), 0)}`, label: "Companies worked with" },
 ];
 

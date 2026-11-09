@@ -25,7 +25,8 @@ export const profile = {
   instagram: "",
   linkedin: "https://www.linkedin.com/in/dyllan-mutsereketa-519855390",
   github: "https://github.com/SirDyllan",
-  cv: "/docs/dyllan-mutsereketa-cv.docx",
+  cv: "/docs/dyllan-mutsereketa-cv.pdf",
+  cvDocx: "/docs/dyllan-mutsereketa-cv.docx",
   photo: "/images/dyllan-profile.jpg",
 };
 
@@ -169,6 +170,7 @@ export const skills: Record<string, string[]> = {
     "Firebase",
     "Google Maps API",
     "OpenAI API",
+    "Prompt Engineering",
     "Namecheap Hosting",
   ],
   "Networking & IT Support": [
@@ -177,6 +179,7 @@ export const skills: Record<string, string[]> = {
     "LAN Setup & Troubleshooting",
     "TCP/IP & Subnetting",
     "IT Support",
+    "Cybersecurity (CTF)",
   ],
   Design: ["Figma", "UI/UX Design", "Adobe Photoshop"],
 };
@@ -219,12 +222,20 @@ export const projects: Project[] = [
       "Tinkercad",
       "Telecommunications",
     ],
-    status: "NESARI 2026 · Masvingo",
+    status: "NESARI 2026 · Great Zimbabwe University",
     certificateId: "nesari-competitions",
     featured: true,
-    // Drop event photos into public/images/projects/netone/ then list them here,
-    // e.g. "/images/projects/netone/pitch.jpg"
-    gallery: [],
+    gallery: [
+      "/images/projects/netone/04-live.webp",
+      "/images/projects/netone/05-presenting.webp",
+      "/images/projects/netone/02-greenhex.webp",
+      "/images/projects/netone/03-dyllan-hazell.webp",
+      "/images/projects/netone/06-mentors.webp",
+      "/images/projects/netone/07-ceremony.webp",
+      "/images/projects/netone/01-day-before.webp",
+      "/images/projects/netone/08-arriving-masvingo.webp",
+      "/images/projects/netone/09-night-before.webp",
+    ],
   },
   {
     title: "ServiceBridge AI",
@@ -291,6 +302,15 @@ export const projects: Project[] = [
       "Responsive Design",
     ],
     link: "https://hollandsck.site",
+    linkLabel: "View Live Project",
+  },
+  {
+    title: "Multiband",
+    type: "Tech Collective Portfolio & Booking Platform",
+    summary:
+      "A portfolio and service booking platform I founded and built for Multiband, an 11 member Zimbabwean tech collective spanning software, hardware, media, telecom and public speaking. Content is data driven, so each member, project and service is one file, and booking requests go straight to the right member by email.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Resend", "Vercel"],
+    link: "https://multiband.vercel.app",
     linkLabel: "View Live Project",
   },
   {
@@ -366,6 +386,24 @@ export const certificates: Certificate[] = [
     // Add the certificate later: drop it into public/certificates/ and set
     // image: "/certificates/nesari-competitions.jpg",
   },
+  {
+    id: "potraz-national-ctf",
+    title: "POTRAZ National Capture the Flag",
+    issuer: "CTFROOM · POTRAZ",
+    description:
+      "Certificate of completion for the POTRAZ National Capture the Flag Competition on CTFROOM RangeTime, recognising applied cybersecurity and problem solving skills. Certificate ID CTFR-EVT-59BF82FBCF.",
+    image: "/certificates/potraz-national-ctf.webp",
+    date: "Nov 8, 2026",
+  },
+  {
+    id: "freeacademy-prompt-engineering",
+    title: "Prompt Engineering",
+    issuer: "FreeAcademy.ai",
+    description:
+      "Verified credential for completing the 29 lesson Prompt Engineering course and passing the final exam. Credential FA-2026-PE-167K1N.",
+    image: "/certificates/freeacademy-prompt-engineering.webp",
+    date: "Nov 4, 2026",
+  },
 ];
 
 export const timeline: string[] = [
@@ -378,7 +416,56 @@ export const timeline: string[] = [
   "Remote Software Developer at Codico Software Solutions (Jun to Jul 2026)",
   "Telecom innovation: NetOne Dynamic Antenna Intelligence with the GreenHex Team at NESARI 2026, Masvingo",
   "IT Intern at Feltach Contracting & Prevsol Digital (Sep 2026 to Sep 2027)",
+  "Prompt Engineering credential from FreeAcademy.ai (Nov 2026)",
+  "POTRAZ National Capture the Flag Competition on CTFROOM (Nov 2026)",
 ];
+
+export type ModuleResult = { code: string; name: string; mark: number; grade: string };
+
+export const academicResults = {
+  degree: "BSc (Hons) Information Technology",
+  school: "Chinhoyi University of Technology",
+  summary:
+    "Official examination results from Chinhoyi University of Technology across my first three semesters. Every module passed at B- or better, with ten of twelve at A or A-.",
+  stats: [
+    { value: "77%", label: "Average mark" },
+    { value: "12", label: "Modules passed" },
+    { value: "10", label: "At A or A-" },
+    { value: "85", label: "Highest mark (OOP)" },
+  ],
+  semesters: [
+    {
+      title: "Level 1 · Semester 1",
+      period: "Aug to Dec 2024",
+      modules: [
+        { code: "CUITM102", name: "Computer Mathematics", mark: 61, grade: "B-" },
+        { code: "CUITM114", name: "Introduction to Procedural Programming", mark: 79, grade: "A-" },
+        { code: "CUITM217", name: "Data Science", mark: 79, grade: "A-" },
+        { code: "CULCSM101", name: "Communication and Information Technology", mark: 64, grade: "B-" },
+      ],
+    },
+    {
+      title: "Level 1 · Semester 2",
+      period: "Mar to Jun 2025",
+      modules: [
+        { code: "CUITM113", name: "Visual Languages and Programming", mark: 76, grade: "A-" },
+        { code: "CUITM109", name: "Operating Systems", mark: 84, grade: "A" },
+        { code: "CUITM108", name: "Computer Organization and Architecture", mark: 78, grade: "A-" },
+        { code: "CUITM201", name: "Database Systems", mark: 78, grade: "A-" },
+      ],
+    },
+    {
+      title: "Level 2 · Semester 1",
+      period: "Aug to Dec 2025",
+      modules: [
+        { code: "CUITM206", name: "Object Oriented Programming", mark: 85, grade: "A" },
+        { code: "CUITM220", name: "Software Engineering and Project Management", mark: 75, grade: "A-" },
+        { code: "CUITM218", name: "Mobile Applications Development", mark: 81, grade: "A" },
+        { code: "CUITM216", name: "Website Design and E-Business", mark: 80, grade: "A-" },
+      ],
+    },
+  ] as { title: string; period: string; modules: ModuleResult[] }[],
+};
 
 export const databaseExperience = {
   summary:
