@@ -16,7 +16,7 @@ export const profile = {
   name: "Dyllan Mutsereketa",
   brand: "Dyllan Mutsereketa",
   role: "Software Developer · Data Analyst",
-  headline: "IT Intern at Feltach Contracting",
+  headline: "IT Intern at Prevsol Digital",
   location: "Zimbabwe",
   email: "dyllanmutsereketa@gmail.com",
   phone: "+263 78 036 8715",
@@ -32,7 +32,7 @@ export const profile = {
 
 export const quickFacts: { label: string; value: string }[] = [
   { label: "Based in", value: "Zimbabwe" },
-  { label: "Currently", value: "IT Intern · Feltach Contracting" },
+  { label: "Currently", value: "IT Intern · Prevsol Digital" },
   { label: "Studying", value: "BSc (Hons) Information Technology" },
   { label: "Focus", value: "Software, Data Analysis & Networking" },
 ];
@@ -59,8 +59,8 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    company: "Feltach Contracting",
-    logo: "/logos/feltach-contracting.svg",
+    company: "Prevsol Digital",
+    logo: "/logos/prevsol-digital.png",
     role: "IT Intern · Procurement & Data Analytics",
     employmentType: "Internship · 12 month contract",
     location: "Zimbabwe · On site",
@@ -68,7 +68,7 @@ export const experience: Experience[] = [
     end: "Sep 28, 2027",
     current: true,
     summary:
-      "Industrial attachment with Feltach Contracting, the main business, where I also support its sister business Prevsol Digital, a technology, innovation and digitalization company. My role spans software development, IT procurement and data analytics, and I help build the partnerships that move the business forward.",
+      "Industrial attachment with Prevsol Digital, a technology, innovation and digitalization company and home of the IT team, where I also support its sister business Feltach Contracting. My role spans software development, IT procurement and data analytics, and I help build the partnerships that move the business forward.",
     highlights: [
       "Gathering and documenting user requirements; preparing process flows, wireframes and technical specifications.",
       "Designing and developing approved applications, databases, APIs and integrations.",
@@ -82,8 +82,8 @@ export const experience: Experience[] = [
     ],
     partners: [
       {
-        name: "Prevsol Digital",
-        logo: "/logos/prevsol-digital.png",
+        name: "Feltach Contracting",
+        logo: "/logos/feltach-contracting.svg",
         note: "Sister business, supported under the same contract",
       },
     ],
@@ -207,35 +207,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "NetOne Dynamic Antenna Intelligence",
-    type: "Explainable AI Antenna Optimisation · NESARI 2026",
+    title: "Multiband",
+    type: "Tech Collective Portfolio & Booking Platform",
     summary:
-      "Built with the GreenHex Team for NetOne Topic 2 at the NESARI 2026 competition in Masvingo. A software first prototype that scans 72 directions of simulated network demand, forecasts where demand is heading, and recommends a safe antenna azimuth and tilt, explaining every decision and choosing HOLD when its forecast is unreliable or the gain is too small. A live dashboard compares fixed, busiest direction and forecast aware strategies, verifies results on unseen data, with a virtual Arduino servo demo in Tinkercad showing the actuator idea.",
-    stack: [
-      "Python",
-      "Flask",
-      "JavaScript",
-      "HTML & CSS",
-      "Forecasting",
-      "Explainable AI",
-      "Arduino",
-      "Tinkercad",
-      "Telecommunications",
-    ],
-    status: "NESARI 2026 · Great Zimbabwe University",
-    certificateId: "nesari-competitions",
+      "A portfolio and service booking platform I founded and built for Multiband, an 11 member Zimbabwean tech collective spanning software, hardware, media, telecom and public speaking. Content is data driven, so each member, project and service is one file, and booking requests go straight to the right member by email.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Resend", "Vercel"],
+    link: "https://multiband.vercel.app",
+    linkLabel: "View Live Project",
     featured: true,
-    gallery: [
-      "/images/projects/netone/04-live.webp",
-      "/images/projects/netone/05-presenting.webp",
-      "/images/projects/netone/02-greenhex.webp",
-      "/images/projects/netone/03-dyllan-hazell.webp",
-      "/images/projects/netone/06-mentors.webp",
-      "/images/projects/netone/07-ceremony.webp",
-      "/images/projects/netone/01-day-before.webp",
-      "/images/projects/netone/08-arriving-masvingo.webp",
-      "/images/projects/netone/09-night-before.webp",
-    ],
   },
   {
     title: "ServiceBridge AI",
@@ -305,13 +284,35 @@ export const projects: Project[] = [
     linkLabel: "View Live Project",
   },
   {
-    title: "Multiband",
-    type: "Tech Collective Portfolio & Booking Platform",
+    title: "NetOne Dynamic Antenna Intelligence",
+    type: "Explainable AI Antenna Optimisation · NESARI 2026",
     summary:
-      "A portfolio and service booking platform I founded and built for Multiband, an 11 member Zimbabwean tech collective spanning software, hardware, media, telecom and public speaking. Content is data driven, so each member, project and service is one file, and booking requests go straight to the right member by email.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Resend", "Vercel"],
-    link: "https://multiband.vercel.app",
-    linkLabel: "View Live Project",
+      "Built with the GreenHex Team for NetOne Topic 2 at the NESARI 2026 competition in Masvingo. A software first prototype that scans 72 directions of simulated network demand, forecasts where demand is heading, and recommends a safe antenna azimuth and tilt, explaining every decision and choosing HOLD when its forecast is unreliable or the gain is too small. A live dashboard compares fixed, busiest direction and forecast aware strategies, verifies results on unseen data, with a virtual Arduino servo demo in Tinkercad showing the actuator idea.",
+    stack: [
+      "Python",
+      "Flask",
+      "JavaScript",
+      "HTML & CSS",
+      "Forecasting",
+      "Explainable AI",
+      "Arduino",
+      "Tinkercad",
+      "Telecommunications",
+    ],
+    status: "NESARI 2026 · Great Zimbabwe University",
+    certificateId: "nesari-competitions",
+    featured: true,
+    gallery: [
+      "/images/projects/netone/04-live.webp",
+      "/images/projects/netone/05-presenting.webp",
+      "/images/projects/netone/02-greenhex.webp",
+      "/images/projects/netone/03-dyllan-hazell.webp",
+      "/images/projects/netone/06-mentors.webp",
+      "/images/projects/netone/07-ceremony.webp",
+      "/images/projects/netone/01-day-before.webp",
+      "/images/projects/netone/08-arriving-masvingo.webp",
+      "/images/projects/netone/09-night-before.webp",
+    ],
   },
   {
     title: "ZAFM Church Management System",
@@ -333,20 +334,6 @@ export const projects: Project[] = [
     summary:
       "A C# Windows Forms application connected to MySQL for managing job applications and recruitment records.",
     stack: ["C#", "MySQL", "Windows Forms"],
-  },
-  {
-    title: "Low Cost Water Heater",
-    type: "Engineering Innovation",
-    summary:
-      "An affordable engineering solution designed for rural and peri urban communities in Zimbabwe.",
-    stack: ["Engineering", "Innovation", "Community Impact"],
-  },
-  {
-    title: "Other University & Practice Projects",
-    type: "Student Project Collection",
-    summary:
-      "Additional practical projects including a gym management system, the Tryex Gadgets online store, and a real estate listing website prototype.",
-    stack: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
   },
 ];
 
@@ -415,7 +402,7 @@ export const timeline: string[] = [
   "Finalist at the USAII Global Hackathon 2026 with ServiceBridge AI",
   "Remote Software Developer at Codico Software Solutions (Jun to Jul 2026)",
   "Telecom innovation: NetOne Dynamic Antenna Intelligence with the GreenHex Team at NESARI 2026, Masvingo",
-  "IT Intern at Feltach Contracting & Prevsol Digital (Sep 2026 to Sep 2027)",
+  "IT Intern at Prevsol Digital & Feltach Contracting (Sep 2026 to Sep 2027)",
   "Prompt Engineering credential from FreeAcademy.ai (Nov 2026)",
   "POTRAZ National Capture the Flag Competition on CTFROOM (Nov 2026)",
 ];

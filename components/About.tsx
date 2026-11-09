@@ -29,8 +29,8 @@ export default function About() {
             <p>
               I&apos;m an Information Technology student and software developer
               from Zimbabwe, currently completing a 12 month IT internship at{" "}
-              <strong className="text-ink">Feltach Contracting</strong> and its sister
-              business <strong className="text-ink">Prevsol Digital</strong>.
+              <strong className="text-ink">Prevsol Digital</strong> and its sister
+              business <strong className="text-ink">Feltach Contracting</strong>.
             </p>
             <p>
               I build web and mobile applications, design databases and APIs,
